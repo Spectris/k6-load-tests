@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  k6:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ${SCRIPTS_PATH}:/scripts
+      - ${CONFIG_PATH}:/data
+      - ${EXPORT_PATH}:/exports
+    ports:
+      - "6969:5665"
+    working_dir: /scripts
+    env_file:
+      - .env
+    environment:
+      - API_BASE_URL
+    secrets:
+      - token_secret
+    command: ["k6", "run", "base/default.js"]
+
+secrets:
+  token_secret:
+    file: .secrets/TOKEN_SECRET

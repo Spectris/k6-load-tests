@@ -1,0 +1,5 @@
+# Use official k6 base image from Grafana
+FROM grafana/k6:latest-with-browser
+
+# Set working directory where scripts will be mounted
+WORKDIR /scripts

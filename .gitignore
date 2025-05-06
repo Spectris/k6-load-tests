@@ -1,0 +1,21 @@
+# Ignore local env files
+.env
+
+# Ignore Docker secrets
+.secrets/
+
+# Node-style logs or temp files
+*.log
+*.tmp
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Docker build artifacts (if any)
+*.tar
+*.pid
+
+# Optional: exclude local run scripts or result dumps
+*.json
+export/
