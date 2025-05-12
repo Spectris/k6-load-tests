@@ -1,10 +1,11 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { k6Options } from "../config/options.js";
+import { getUrl } from "../config/urls.js";
 
 export const options = k6Options;
 
-const url ="<insert your url here>" //todo replace with config
+const url = getUrl();
 
 export default function () {
     const res = http.get(url, options);
