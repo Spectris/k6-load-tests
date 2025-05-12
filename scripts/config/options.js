@@ -15,6 +15,7 @@ const defaultOptions = {
 export let loadedOptions = {};
 
 try {
+    //data = mounted directory with json configs
     loadedOptions = JSON.parse(open("/data/k6/options.json"));
 } catch (_) {}
 

@@ -3,7 +3,7 @@ import { check, sleep } from "k6";
 import { k6Options } from "../config/options.js";
 import { getUrl } from "../config/urls.js";
 
-export const options = k6Options;
+const options = k6Options;
 
 const url = getUrl();
 
