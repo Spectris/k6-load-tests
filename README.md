@@ -30,7 +30,7 @@ cp template.env .env
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/your-org/k6-load-tests.git
+   git clone https://github.com/spectris/k6-load-tests.git
    cd k6-load-tests
 
    mkdir -p .secrets
